@@ -1,0 +1,28 @@
+name: Auto sync
+
+on:
+# 如果需要PR触发把push前的#去掉
+# push:
+  schedule:
+    # 每天北京时间9点跑
+    - cron:  '*/5 * * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: git pull
+      run: |
+        echo 'Yes'
+        git pull git@github.com:xinntao/BasicSR.git master
