@@ -4,12 +4,13 @@ pwd
 
 # echo "$SSH_PRIVATE_KEY"
 
-
-echo 'yyyyyyyyyyyyyyyy'
-sudo mkdir -p /root/.ssh
-sudo echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
-sudo chmod 600 /root/.ssh/id_rsa
-
+if [[ -n "$SSH_PRIVATE_KEY" ]]
+then
+    echo 'yyyyyyyyyyyyyyyy'
+    sudo mkdir -p /root/.ssh
+    sudo echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
+    sudo chmod 600 /root/.ssh/id_rsa
+fi
 
 echo 'xxxxxxxxx'
 
