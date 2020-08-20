@@ -2,13 +2,13 @@ set -e
 echo 'Yes'
 pwd
 
-echo "$SSH_PRIVATE_KEY"
+# echo "$SSH_PRIVATE_KEY"
 
 
 echo 'yyyyyyyyyyyyyyyy'
-mkdir -p /root/.ssh
-echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
-chmod 600 /root/.ssh/id_rsa
+sudo mkdir -p /root/.ssh
+sudo echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
+sudo chmod 600 /root/.ssh/id_rsa
 
 
 echo 'xxxxxxxxx'
