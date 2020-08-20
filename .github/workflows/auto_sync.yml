@@ -24,6 +24,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: git pull
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
         echo 'Yes'
         pwd
