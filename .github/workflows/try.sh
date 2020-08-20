@@ -12,5 +12,6 @@ echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
 ls ~/.ssh
 
 
-cd ~
-pwd
+git clone git@github.com:xinntao/test_sync.git
+cd test_sync
+git pull git@github.com:xinntao/BasicSR.git master
