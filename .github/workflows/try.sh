@@ -15,7 +15,9 @@ fi
 echo 'xxxxxxxxx'
 
 mkdir -p ~/.ssh
-cp /root/.ssh/* ~/.ssh/ 2> /dev/null || true
+echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+ls ~/.ssh
+
 
 cd ~
 pwd
