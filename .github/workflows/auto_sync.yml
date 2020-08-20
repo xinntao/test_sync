@@ -1,11 +1,12 @@
 name: Auto sync
 
-on:
+# on:
+on: [push]
 # 如果需要PR触发把push前的#去掉
 # push:
-  schedule:
-    # 每天北京时间9点跑
-    - cron:  '*/5 * * * *'
+  # schedule:
+  #   # 每天北京时间9点跑
+  #   - cron:  '*/5 * * * *'
 
 jobs:
   build:
