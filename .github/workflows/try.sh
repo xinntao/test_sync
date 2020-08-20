@@ -2,7 +2,7 @@ set -e
 echo 'Yes'
 pwd
 
-
+echo "$SSH_PRIVATE_KEY"
 
 
 echo 'yyyyyyyyyyyyyyyy'
