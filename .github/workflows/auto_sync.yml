@@ -27,7 +27,7 @@ jobs:
       run: |
         echo 'Yes'
         pwd
-        sh ./try.sh
+        bash .github/workflows/try.sh
         set -e
 
         if [[ -n "$SSH_PRIVATE_KEY" ]]
