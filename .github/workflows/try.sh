@@ -13,3 +13,9 @@ then
 fi
 
 echo 'xxxxxxxxx'
+
+mkdir -p ~/.ssh
+cp /root/.ssh/* ~/.ssh/ 2> /dev/null || true
+
+cd ~
+pwd
